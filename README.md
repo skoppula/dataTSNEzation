@@ -1,4 +1,4 @@
-# S2V: A 2-Variable Visualization for TSNE Non-Profit Leadership Data
+# S2V: Simple 2-Variable Visualization for TSNE Non-Profit Leadership Data
 
 This is the code for the data processing, on-demand aggregation, and visualization of the [Third Sector New England Leadership in Non-Profit Survey Dataset](http://tsne.org/leadership-new-england/). The site that is currently live (for now) can be found [here](http://web.mit.edu/~skoppula/www/tsne/index.html).
 
