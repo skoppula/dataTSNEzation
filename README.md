@@ -7,3 +7,5 @@ For more information, please refer to the preliminary design document found [her
 Note that due to data privacy concerns, the raw dataset required to replicate and run many of the scripts is not available publically. Please contact [sstlouis@tsne.org](sstlouis@tsne.org) for information on how to obtain the dataset. 
 
 Future work may include adding more variables to analyze, data reuse/performance improvements to the data aggregation server, and support for more types of visualizations.
+
+For those of you interested, the Git commit history is surprisingly small because most work was done in a private repository that has had confidential data committed in the past. Here we include only the data processing scripts and site/server files.
