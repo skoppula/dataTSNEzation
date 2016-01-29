@@ -1,0 +1,138 @@
+#content {
+  background-color: white;
+  padding: 2% 10% 0 10%; }
+
+#graph {
+  /* Creates a small triangle extender for the tooltip */
+  /*Style northward tooltips differently*/ }
+  #graph text {
+    font-size: 10px; }
+  #graph .axis path,
+  #graph .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges; }
+  #graph .x.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges; }
+  #graph .d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 2px; }
+  #graph .d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center; }
+  #graph .d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0; }
+
+#nav-bar {
+  background-color: #0e6aa8;
+  height: 10px;
+  width: 100.1%; }
+
+#submission {
+  background: linear-gradient(to bottom, #5246a4 0%, #322b65 100%);
+  background: -webkit-linear-gradient(top, #5246a4 0%, #322b65 100%);
+  background-color: #322b65;
+  border: none;
+  color: white;
+  font-family: "adelle-sans",sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 1em;
+  padding: 0.3em 2.5em;
+  text-transform: uppercase; }
+
+body {
+  font-family: "adelle-sans",sans-serif; }
+
+footer {
+  background-color: #322b65;
+  color: #a09acc;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2em;
+  padding: 1em;
+  text-align: center; }
+  footer strong {
+    color: #e1daaa; }
+
+form {
+  padding: 3em; }
+  form .dropdown-lists {
+    display: inline-block; }
+  form fieldset {
+    border-color: #0e6aa8;
+    border-style: solid;
+    border-width: 0.2em;
+    display: block;
+    margin-top: 1.3em;
+    padding: 0 1.5em 1.5em; }
+  form legend {
+    border-bottom-color: #969696;
+    border-bottom-width: 0.1em;
+    color: #0e6aa8;
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 0; }
+  form span {
+    font-size: 1.2em; }
+
+img {
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 20%; }
+
+.tabs {
+  border-bottom: 5px solid #322b65;
+  display: inline-block;
+  font-weight: bold;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 2%;
+  text-align: center;
+  vertical-align: middle;
+  width: 75%; }
+  .tabs .active-tab a {
+    background-color: #322b65; }
+  .tabs .active-tab a:hover {
+    background-color: #322b65 !important;
+    border-color: #322b65; }
+  .tabs a {
+    background-color: #c3a204;
+    color: white;
+    padding: 0; }
+  .tabs a:hover {
+    background-color: #937b04 !important;
+    border-bottom: #937b04;
+    -webkit-transition: background-color 130ms linear;
+    -moz-transition: background-color 130ms linear;
+    -o-transition: background-color 130ms linear;
+    -ms-transition: background-color 130ms linear;
+    transition: background-color 130ms linear; }
+  .tabs ul {
+    display: flex;
+    flex-direction: row; }
+  .tabs li {
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9em;
+    margin-left: 0.5%;
+    margin-right: 0.5%; }
+
+/*# sourceMappingURL=style.css.map */

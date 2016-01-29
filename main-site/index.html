@@ -1,0 +1,253 @@
+<!-- BUGS/TODO
+    - DELETE GRAPH ONCE APPLY BUTTON HAS BEEN CLICKED AGAIN
+
+    - fixed page width when adding graph
+    - make header section bigger
+    - fix formatting APPLY button
+    - AXES NAMES (Becky)
+    - look up better ways for long drop down lists
+    - add inline tip css to scss file
+    - transition of graph appearing
+
+    - make tabs section wider and responsive (mobile)
+    - freeform responses?
+-->
+<!-- Main page for TSNE Data Visualizations for MIT IAP's Code for Good -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content=
+    "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cross Tabs | Third Sector New England</title>
+    <link href="http://tsne.org/sites/all/themes/tsne/favicon.ico" rel="icon"
+    type="image/png"><!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet"><!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'><!-- custom TSNE stylesheet -->
+    <link href='css/style.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Blue Bar -->
+    <div class="container-fluid" id='nav-bar'></div>
+
+    <div id='content'>
+        <a href='http://tsne.org/'><img src='logo.jpg'></a>
+
+        <!-- Navigation Bar -->
+        <ul class="nav nav-tabs tabs">
+            <li><a href="http://tsne.org/leadership-new-england/data">Leadership Profile</a></li>
+            <li><a href="http://tsne.org/leadership-new-england/data/organization-profile">Organization Profile</a></li>
+            <li><a href="http://tsne.org/leadership-new-england/data/transitions">Transitions</a></li>
+            <li><a href="http://tsne.org/leadership-new-england/data/board-leader-equation">Board-Leader Equation</a></li>
+            <li class='active-tab'><a href="#">Cross Tabs</a></li> <!-- Current Tab -->
+        </ul>
+
+        <!--  -->
+        <form>
+            <span>Select which survey criteria you would like to see.</span>
+            <fieldset>
+                <legend>Criteria</legend>
+                <label>First Option</label>
+                <select class="form-control" id= 'user_categories'>
+                    <!-- Leader Information -->
+                    <option value='income'>Annual Income</option>
+                    <option value='job_category'>Organization Leader or Board Member?</option>
+                    <option value='age'>Age</option>
+                    <option value='gender'>Gender</option>
+                    <option value='race'>Race/Ethnicity</option>
+                    <option value='highest_education'>Education Level</option>
+                    <option value='job_title'>Job Title</option>
+                    <option value='past_sectors_worked'>Past Sector Experience</option>
+                    <option value='years_in_nonprofit'>Number of Years in Nonprofit Sector</option>
+                    <option value='num_years_in_curr_position'>Number of Years in Current Position</option>
+                    <option value='previous_positions'>Previous Positions</option>
+
+                    <option value='time_spent_on_job'>Hours Per Week</option>
+                    <option value='feel_about_hours'>How Does Leader Feel About Number of Hours?</option>
+                    <option value='feel_about_job'>How Does Leader Feel About His/Her Job?</option>
+                    <option value='feel_about_work_life'>How Does Leader Feel About Work Life</option>
+                    <option value='feel_burned_out'>Does Leader Feel Burned Out?</option>
+                    <option value='how_long_leaders'>How Long do Leaders Think They Will Stay In Position?</option>
+                    <option value='make_stay_longer'>What Would Make Leaders Stay Longer in Position?</option>
+
+                    <option value='effective_lead_change'>How Effective Does Leader Feel In Leading Change?</option>
+                    <option value='effective_lead_external'>How Effective Does Leader Feel In Working With People External to Organization?</option>
+                    <option value='effective_lead_mission'>How Effective Does Leader Feel In Promoting Mission of Organization?</option>
+                    <option value='effective_lead_others'>How Effective Does Leader Feel In Leading Others?</option>
+                    <option value='effective_lead_self'>How Effective Does Leader Feel In Leading Self?</option>  
+
+                    <!-- Organization Information -->
+                    <option value='organization_area'>Organization Focus</option>
+                    <option value='annual_op_budget'>Annual Operating Budget</option>
+                    <option value='cash_reserves'>Cash Reserves</option>
+                    <option value='state'>State</option>
+                    <option value='year_founded'>Year Founded</option>
+
+                    <option value='predecessor'>Situation of Position Upon Assuming Leadership</option>
+                    <option value='situation_inherited'>Situation of Nonprofit Upon Assuming Leadership</option>
+                    <option value='highest_priority'>Highest Priority Upon Assuming Leadership</option>
+
+                    <!-- Board Information -->
+                    <option value='size_board'>Size of Board</option>
+                    <option value='board_ability_diversity'>Range of Board Abilities (leader perspective)</option>
+                    <option value='board_class_diversity'>Board Class Diversity (leader perspective)</option>
+                    <option value='board_gender_diversity'>Board Gender Diversity (leader perspective)</option>
+                    <option value='board_race_diversity'>Board Race Diversity (leader perspective)</option>
+                    <option value='board_sexual_diversity'>Board Sexual Diversity (leader perspective)</option>
+                    <option value='ann_board_perf_eval'>Does Leader Receive Annual Performance Evaluation from Board?</option>
+                    <option value='ann_board_perf_eval_usefulness'>Usefulness of Annual Performance Evaluation from Board (leader perspective)</option>
+
+                    <!-- Questions for Board Members -->
+                    <option value='leader_leave_create_external_comm_plan'>Board Ability to Handle External Communications If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_create_internal_comm_plan'>Board Ability to Handle Internal Communications If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_fiduciary_integrity'>Board Ability to Handle Financial Staff If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_funding_continuity'>Board Ability to Handle Continuity with Funding and Contracts If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_hire_interim'>Board Ability to Hire Interim If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_identify_interim'>Board Ability to Identify Interim If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_transition_plan'>Board Ability to Create Transition Plan If Leader Leaves (board perspective)</option>
+
+                    <!-- Staff Information -->
+                    <option value='fulltime_staff_count'>Number of Full Time Staff</option>
+                    <option value='parttime_staff_count'>Number of Part Time Staff</option>
+                    <option value='volunteer_count'>Number of Volunteers</option>
+                    <option value='staff_ability_diversity'>Range of Staff Abilities (leader perspective)</option>
+                    <option value='staff_class_diversity'>Staff Socioeconomic Diversity (leader perspective)</option>
+                    <option value='staff_gender_diversity'>Staff Gender Diversity (leader perspective)</option>
+                    <option value='staff_racial_diversity'>Staff Racial Diversity (leader perspective)</option>
+                    <option value='staff_sexual_diversity'>Staff Sexual Diversity (leader perspective)</option>
+                    <option value='bench_strength'>Bench Strength (leader perspective)</option>
+                    <option value='strengthen_staff'>Staff-Strengthening Techniques</option>
+                </select>
+
+                <br><label>Second Option</label>
+                <select class="form-control" id='user_comparison_variable'>
+                    <!-- Leader Information -->
+                    <option value='age'>Age</option>
+                    <option value='highest_education'>Education Level</option>
+                    <option value='job_category'>Organization Leader or Board Member?</option>
+                    <option value='gender'>Gender</option>
+                    <option value='race'>Race/Ethnicity</option>
+                    <option value='income'>Annual Income</option>
+                    <option value='job_title'>Job Title</option>
+                    <option value='past_sectors_worked'>Past Sector Experience</option>
+                    <option value='years_in_nonprofit'>Number of Years in Nonprofit Sector</option>
+                    <option value='num_years_in_curr_position'>Number of Years in Current Position</option>
+                    <option value='previous_positions'>Previous Positions</option>
+
+                    <option value='time_spent_on_job'>Hours Per Week</option>
+                    <option value='feel_about_hours'>How Does Leader Feel About Number of Hours?</option>
+                    <option value='feel_about_job'>How Does Leader Feel About His/Her Job?</option>
+                    <option value='feel_about_work_life'>How Does Leader Feel About Work Life</option>
+                    <option value='feel_burned_out'>Does Leader Feel Burned Out?</option>
+                    <option value='how_long_leaders'>How Long do Leaders Think They Will Stay In Position?</option>
+                    <option value='make_stay_longer'>What Would Make Leaders Stay Longer in Position?</option>
+
+                    <option value='effective_lead_change'>How Effective Does Leader Feel In Leading Change?</option>
+                    <option value='effective_lead_external'>How Effective Does Leader Feel In Working With People External to Organization?</option>
+                    <option value='effective_lead_mission'>How Effective Does Leader Feel In Promoting Mission of Organization?</option>
+                    <option value='effective_lead_others'>How Effective Does Leader Feel In Leading Others?</option>
+                    <option value='effective_lead_self'>How Effective Does Leader Feel In Leading Self?</option>  
+
+                    <!-- Organization Information -->
+                    <option value='organization_area'>Organization Focus</option>
+                    <option value='annual_op_budget'>Annual Operating Budget</option>
+                    <option value='cash_reserves'>Cash Reserves</option>
+                    <option value='state'>State</option>
+                    <option value='year_founded'>Year Founded</option>
+
+                    <option value='predecessor'>Situation of Position Upon Assuming Leadership</option>
+                    <option value='situation_inherited'>Situation of Nonprofit Upon Assuming Leadership</option>
+                    <option value='highest_priority'>Highest Priority Upon Assuming Leadership</option>
+
+                    <!-- Board Information -->
+                    <option value='size_board'>Size of Board</option>
+                    <option value='board_ability_diversity'>Range of Board Abilities (leader perspective)</option>
+                    <option value='board_class_diversity'>Board Class Diversity (leader perspective)</option>
+                    <option value='board_gender_diversity'>Board Gender Diversity (leader perspective)</option>
+                    <option value='board_race_diversity'>Board Race Diversity (leader perspective)</option>
+                    <option value='board_sexual_diversity'>Board Sexual Diversity (leader perspective)</option>
+                    <option value='ann_board_perf_eval'>Does Leader Receive Annual Performance Evaluation from Board?</option>
+                    <option value='ann_board_perf_eval_usefulness'>Usefulness of Annual Performance Evaluation from Board (leader perspective)</option>
+
+                    <!-- Questions for Board Members -->
+                    <option value='leader_leave_create_external_comm_plan'>Board Ability to Handle External Communications If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_create_internal_comm_plan'>Board Ability to Handle Internal Communications If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_fiduciary_integrity'>Board Ability to Handle Financial Staff If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_funding_continuity'>Board Ability to Handle Continuity with Funding and Contracts If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_hire_interim'>Board Ability to Hire Interim If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_identify_interim'>Board Ability to Identify Interim If Leader Leaves (board perspective)</option>
+                    <option value='leader_leave_transition_plan'>Board Ability to Create Transition Plan If Leader Leaves (board perspective)</option>
+
+                    <!-- Staff Information -->
+                    <option value='fulltime_staff_count'>Number of Full Time Staff</option>
+                    <option value='parttime_staff_count'>Number of Part Time Staff</option>
+                    <option value='volunteer_count'>Number of Volunteers</option>
+                    <option value='staff_ability_diversity'>Range of Staff Abilities (leader perspective)</option>
+                    <option value='staff_class_diversity'>Staff Socioeconomic Diversity (leader perspective)</option>
+                    <option value='staff_gender_diversity'>Staff Gender Diversity (leader perspective)</option>
+                    <option value='staff_racial_diversity'>Staff Racial Diversity (leader perspective)</option>
+                    <option value='staff_sexual_diversity'>Staff Sexual Diversity (leader perspective)</option>
+                    <option value='bench_strength'>Bench Strength (leader perspective)</option>
+                    <option value='strengthen_staff'>Staff-Strengthening Techniques</option>
+                </select>
+            </fieldset>
+
+            <input id='submission' name="" type='submit' value='Apply'>
+        </form>
+        <div id='graph'></div>
+    </div>
+    <footer>
+        A <a href='http://tsne.org/'><strong>Third Sector New England</strong></a> website made by MIT Code for Good 2016
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap/'s JavaScript plugins) -->
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script charset="utf-8" src="./scripts/d3.v3.js"></script>
+    <script src="./scripts/d3.tip.v0.6.3.js"></script>
+    <!-- Creating the visualization -->
+    <script src="./scripts/render_site_graph.js"></script>
+
+    <script>
+        var user_selected_variables = [];
+        // Saving the user selected variables from dropdown menus
+        $(function() {
+            $('select').change(function() {
+                var selected_form_input = $(this).find(
+                    'option:selected');
+                $('#text').html(selected_form_input.text());
+                $('#value').html(selected_form_input.val());
+                if ($(this).attr('id') == 'user_categories') {
+                    user_selected_variables[0] = selected_form_input.val();
+                } else {
+                    user_selected_variables[1] = selected_form_input.val();
+                }
+            }).change();
+        });
+        // Compose and send request to data server
+        $('#submission').click(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: "GET",
+                url: "https://calm-wildwood-72814.herokuapp.com/" +
+                    user_selected_variables[0] + "-" +
+                    user_selected_variables[1],
+                dataType: "json",
+                success: processData,
+                error: function() {
+                    alert("Failed to request data to external data server");
+                }
+            });
+
+            function processData(data_from_server) {
+                runD3(data_from_server);
+            }
+        });
+    </script>
+</body>
+</html>

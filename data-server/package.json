@@ -1,0 +1,24 @@
+{
+  "name": "code-for-good-image-server",
+  "version": "0.1.5",
+  "description": "Image serving backend for cross-tab data visualizations for TSNE",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skoppula/code-for-good-image-server"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "license": "MIT"
+}

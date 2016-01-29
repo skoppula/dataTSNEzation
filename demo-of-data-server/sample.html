@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hi there</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        var myData;
+        var var1 = "age";
+        var var2 = "city";
+        $.ajax({
+            type: "GET",
+            url: "https://calm-wildwood-72814.herokuapp.com/" + var1 + "-" + var2,
+            dataType: "json",
+            success: processData,
+            error: function(){ alert("failed"); }
+        });
+
+        function processData(data) {
+            myData = data;
+            console.log(data)
+        }
+    </script>
+    This is a simple page! It tests JSON requests.
+</body>
+</html>
